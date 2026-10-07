@@ -180,7 +180,8 @@ The program therefore identifies the number as positive and odd.
 The execution screenshot should be stored as:
 
 ```text
-screenshots/A1_output.PNG
+<img width="387" height="365" alt="A1_output" src="https://github.com/user-attachments/assets/9c350e61-93ed-4bea-9d3b-8ebf4ad09b27" />
+
 ```
 
 The screenshot should show the actual Oracle execution output.
