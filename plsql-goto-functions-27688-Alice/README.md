@@ -212,7 +212,7 @@ The program identifies the salary as being below the defined salary threshold.
 Save the Oracle execution result as:
 
 ```text
-sceenshots/A2_output.png
+sceenshots/A2_output.PNG
 ```
 
 ---
