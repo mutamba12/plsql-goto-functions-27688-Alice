@@ -175,10 +175,7 @@ The test value used in the program is:
 
 The program therefore identifies the number as positive and odd.
 
-### Screenshot
-
-The execution screenshot should be stored as:
-
+## A1 – Number Classifier
 
 ![A1 Number Classifier Output](sceenshots/A1_output.PNG)
 
