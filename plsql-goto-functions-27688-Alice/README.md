@@ -175,24 +175,9 @@ The test value used in the program is:
 
 The program therefore identifies the number as positive and odd.
 
-## A1 – Number Classifier
+SCREENSHOT 1
 
 ![A1 Number Classifier Output](sceenshots/A1_output.PNG)
-
-
-```
-
-The screenshot should show the actual Oracle execution output.
-
----
-
-## A2 – Salary Review
-
-File:
-
-```text
-01_goto/A2_salary_review.sql
-```
 
 This program demonstrates a GOTO statement used to transfer control when a salary is below the defined threshold.
 
