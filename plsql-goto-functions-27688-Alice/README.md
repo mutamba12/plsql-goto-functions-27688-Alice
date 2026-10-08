@@ -1,40 +1,45 @@
 # PL/SQL GOTO Statements and Functions
 
-**Course:** INSY 8311 – Database Development with PL/SQL
-**Assignment:** Individual Assignment III – PL/SQL GOTO Statements and Functions
-**Student:** Mutamba Alice
-**Student ID:** 27688
-**Instructor:** Eric Maniraguha
-**Submission Date:** October 8, 2026
+**Course:** INSY 8311 – Database Development with PL/SQL  
+**Assignment:** Individual Assignment III – PL/SQL GOTO Statements and Functions  
+**Student:** Mutamba Alice  
+**Student ID:** 27688  
+**Instructor:** Eric Maniraguha  
+**Submission Date:** October 8, 2026  
 
 ---
 
 ## 1. Project Overview
 
-This repository contains my work for Individual Assignment III in the Database Development with PL/SQL course.
+This repository contains my work for **Individual Assignment III – PL/SQL GOTO Statements and Functions** for the Database Development with PL/SQL course.
 
-The project focuses on two main areas of PL/SQL:
+The project demonstrates the use of:
 
-1. **GOTO statements and control flow**
-2. **Stored PL/SQL functions and function testing**
+- PL/SQL GOTO statements
+- Labels and control flow
+- Conditional statements
+- Stored PL/SQL functions
+- Function parameters and return values
+- Exception handling
+- Functions used inside SQL statements
+- Payroll validation
+- Testing and execution evidence
 
-The assignment demonstrates how PL/SQL programs can use conditional logic, labels, GOTO statements, exception handling, stored functions, and SQL queries that call functions.
-
-The project also includes a combined payroll validation task, testing scripts, execution evidence, and a reflection on the concepts learned.
+The project is organized into separate folders for database setup, GOTO programs, functions, tests, screenshots, and documentation.
 
 ---
 
 ## 2. Student Information
 
-| Item         | Information                                  |
-| ------------ | -------------------------------------------- |
-| Student Name | Mutamba Alice                                |
-| Student ID   | 27688                                        |
-| Course       | INSY 8311 – Database Development with PL/SQL |
-| Assignment   | Individual Assignment III                    |
-| Instructor   | Eric Maniraguha                              |
-| Database     | Oracle Database                              |
-| Main Tool    | Oracle SQL*Plus / Oracle SQL Developer       |
+| Item | Information |
+|---|---|
+| Student Name | Mutamba Alice |
+| Student ID | 27688 |
+| Course | INSY 8311 – Database Development with PL/SQL |
+| Assignment | Individual Assignment III |
+| Instructor | Eric Maniraguha |
+| Database | Oracle Database |
+| Tools | Oracle SQL Developer / SQL*Plus |
 
 ---
 
@@ -42,23 +47,23 @@ The project also includes a combined payroll validation task, testing scripts, e
 
 The main objectives of this assignment are to:
 
-* Understand the syntax and use of PL/SQL GOTO statements.
-* Understand how labels are used with GOTO statements.
-* Identify an invalid GOTO statement and correct it.
-* Rewrite a GOTO-based program using structured control flow.
-* Create and execute stored PL/SQL functions.
-* Use parameters and return values in functions.
-* Implement exception handling in functions.
-* Call PL/SQL functions from SQL statements.
-* Combine validation rules into a reusable payroll function.
-* Test PL/SQL programs and document their results.
-* Organize PL/SQL work in a GitHub repository.
+- Understand the syntax and use of PL/SQL GOTO statements.
+- Understand how labels are used with GOTO statements.
+- Identify and correct an invalid GOTO statement.
+- Rewrite a GOTO program using structured control flow.
+- Create and execute stored PL/SQL functions.
+- Use function parameters and return values.
+- Implement exception handling.
+- Call PL/SQL functions from SQL statements.
+- Create a payroll validation function.
+- Test PL/SQL programs and functions.
+- Organize and document a PL/SQL project using GitHub.
 
 ---
 
 # 4. Repository Structure
 
-The repository is organized into separate folders according to the assignment requirements.
+The repository is organized as follows:
 
 ```text
 plsql-goto-functions-27688-Alice/
@@ -88,53 +93,66 @@ plsql-goto-functions-27688-Alice/
 │   ├── test_functions.sql
 │   └── test_validate_payroll.sql
 │
-├── screenshots/
-│   ├── A1_output.png
-│   ├── A2_output.png
-│   ├── A3_error_and_fix.png
-│   ├── A4_output.png
-│   ├── B5_select_output.png
-│   └── C1_output.png
+├── sceenshots/
+│   ├── A1_output.PNG
+│   ├── A2_output.PNG
+│   ├── A3_error_and_fix.PNG
+│   ├── A4_output1.PNG
+│   ├── B5_select_output.PNG
+│   └── C1_output.PNG
 │
 └── docs/
     └── REFLECTION.md
 ```
 
+> **Note:** The screenshot folder is intentionally named `sceenshots` in this repository. All screenshot paths in this README use that exact folder name.
+
 ---
 
 # 5. Database Setup
 
-The database setup is located in:
+The database setup script is located at:
 
 ```text
 00_setup/create_tables.sql
 ```
 
-This script creates the tables required for the assignment:
+This script creates the required database tables:
 
-* `departments`
-* `employees`
+- `departments`
+- `employees`
 
-It also inserts sample department and employee data for testing.
+It also inserts sample data used for testing the assignment.
+
+### Departments
 
 The sample departments include:
 
-* Accounting
-* Human Resources
-* Engineering
-* Sales
+- Accounting
+- Human Resources
+- Engineering
+- Sales
 
-The sample employee records contain employee IDs, names, department IDs, monthly salaries, and hire dates.
+### Employees
 
-### Running the setup
+The employee records contain:
 
-In Oracle SQL*Plus or SQL Developer, run:
+- Employee ID
+- First name
+- Last name
+- Department ID
+- Monthly salary
+- Hire date
+
+### Running the Setup
+
+In Oracle SQL Developer or SQL*Plus, run:
 
 ```sql
 @00_setup/create_tables.sql
 ```
 
-After execution, the tables can be checked with:
+The tables can then be verified using:
 
 ```sql
 SELECT * FROM departments;
@@ -148,7 +166,7 @@ SELECT * FROM employees;
 
 ## A1 – Number Classifier
 
-File:
+**File:**
 
 ```text
 01_goto/A1_number_classifier.sql
@@ -156,30 +174,42 @@ File:
 
 This program demonstrates the use of GOTO statements and labels to classify a number.
 
-The program checks whether the number is:
+The program determines whether a number is:
 
-* Positive
-* Negative
-* Zero
+- Positive
+- Negative
+- Zero
 
 It also determines whether the number is:
 
-* Even
-* Odd
+- Even
+- Odd
 
-The test value used in the program is:
+The test value used is:
 
 ```text
 25
 ```
 
-The program therefore identifies the number as positive and odd.
+The program therefore identifies the number as **positive and odd**.
 
-SCREENSHOT 1
+### A1 Execution Screenshot
+
+The following screenshot shows the Oracle execution result:
 
 ![A1 Number Classifier Output](sceenshots/A1_output.PNG)
 
-This program demonstrates a GOTO statement used to transfer control when a salary is below the defined threshold.
+---
+
+## A2 – Salary Review
+
+**File:**
+
+```text
+01_goto/A2_salary_review.sql
+```
+
+This program demonstrates the use of a GOTO statement to transfer control when a salary is below the defined threshold.
 
 The test salary used is:
 
@@ -189,63 +219,55 @@ The test salary used is:
 
 The program identifies the salary as being below the defined salary threshold.
 
-### Screenshot
+### A2 Execution Screenshot
 
-Save the Oracle execution result as:
+The following screenshot shows the Oracle execution result:
 
-```text
-sceenshots/A2_output.PNG
-```
+![A2 Salary Review Output](sceenshots/A2_output.PNG)
 
 ---
 
 ## A3 – Illegal GOTO and Fix
 
-File:
+**File:**
 
 ```text
 01_goto/A3_illegal_goto.sql
 ```
 
-This task demonstrates an invalid GOTO statement and the corrected version.
+This task demonstrates an invalid GOTO statement and its corrected version.
 
 The first procedure intentionally attempts to jump to a label that is not valid in the required scope. Oracle therefore produces a compilation error.
 
-The corrected procedure uses a valid label and successfully executes.
+The corrected procedure uses a valid label and executes successfully.
 
-This task demonstrates the importance of:
+This task demonstrates:
 
-* Correct label declaration
-* Valid GOTO targets
-* PL/SQL scope rules
-* Compilation error analysis
+- Correct label declaration
+- Valid GOTO targets
+- PL/SQL scope rules
+- Compilation error analysis
+- Correcting an invalid GOTO statement
 
-### Screenshot
+### A3 Execution Screenshot
 
-The screenshot should contain both:
+The screenshot shows both the illegal GOTO compilation error and the successful corrected execution.
 
-1. The compilation error from the illegal GOTO.
-2. The successful output from the corrected version.
-
-Save it as:
-
-```text
-screenshots/A3_error_and_fix.png
-```
+![A3 Illegal GOTO Error and Fix](sceenshots/A3_error_and_fix.PNG)
 
 ---
 
 ## A4 – Rewrite Without GOTO
 
-File:
+**File:**
 
 ```text
 01_goto/A4_rewrite_no_goto.sql
 ```
 
-This program performs the same salary review logic as A2 but uses structured conditional logic instead of GOTO.
+This program performs the salary review logic without using GOTO.
 
-The program demonstrates the use of:
+Instead, it uses structured conditional logic:
 
 ```sql
 IF
@@ -253,15 +275,11 @@ ELSE
 END IF
 ```
 
-This provides a more structured alternative to the GOTO-based approach.
+This demonstrates a structured alternative to GOTO-based control flow.
 
-### Screenshot
+### A4 Execution Screenshot
 
-Save the execution output as:
-
-```text
-screenshots/A4_output.png
-```
+![A4 Rewrite Without GOTO Output](sceenshots/A4_output1.PNG)
 
 ---
 
@@ -269,19 +287,19 @@ screenshots/A4_output.png
 
 ## B1 – Annual Salary Function
 
-File:
+**File:**
 
 ```text
 02_functions/B1_fn_annual_salary.sql
 ```
 
-Function:
+**Function:**
 
 ```text
 fn_annual_salary
 ```
 
-The function receives a monthly salary and returns the annual salary.
+This function receives a monthly salary and returns the annual salary.
 
 The calculation is:
 
@@ -291,7 +309,7 @@ Annual Salary = Monthly Salary × 12
 
 The function also validates the input and rejects NULL or negative salary values.
 
-Example:
+### Example
 
 ```sql
 SELECT fn_annual_salary(500000)
@@ -302,13 +320,13 @@ FROM dual;
 
 ## B2 – Years of Service Function
 
-File:
+**File:**
 
 ```text
 02_functions/B2_fn_years_of_service.sql
 ```
 
-Function:
+**Function:**
 
 ```text
 fn_years_of_service
@@ -316,14 +334,12 @@ fn_years_of_service
 
 This function receives an employee hire date and calculates the number of completed years of service.
 
-The function checks for:
+The function validates:
 
-* NULL hire dates
-* Future hire dates
+- NULL hire dates
+- Future hire dates
 
-An exception is raised when an invalid hire date is supplied.
-
-Example:
+### Example
 
 ```sql
 SELECT fn_years_of_service(DATE '2020-01-01')
@@ -334,13 +350,13 @@ FROM dual;
 
 ## B3 – Tax Calculator Function
 
-File:
+**File:**
 
 ```text
 02_functions/B3_fn_calculate_tax.sql
 ```
 
-Function:
+**Function:**
 
 ```text
 fn_calculate_tax
@@ -350,27 +366,25 @@ This function demonstrates progressive tax calculation.
 
 The demonstration tax bands implemented in this project are:
 
-| Income Range        |                                                                Rate |
-| ------------------- | ------------------------------------------------------------------: |
-| Up to 500,000       |                                                                  0% |
-| 500,001 – 1,000,000 |                                         10% on amount above 500,000 |
-| Above 1,000,000     | 10% on the first taxable band and 20% on the amount above 1,000,000 |
+| Income Range | Rate |
+|---|---:|
+| Up to 500,000 | 0% |
+| 500,001 – 1,000,000 | 10% on amount above 500,000 |
+| Above 1,000,000 | 10% on the first taxable band and 20% on the amount above 1,000,000 |
 
-These rates are implementation assumptions for the assignment demonstration because the assignment instructions did not provide specific tax rates.
-
-The function validates the income input before calculating tax.
+These rates are implementation assumptions for demonstration because specific tax rates were not provided in the assignment instructions.
 
 ---
 
 ## B4 – Department Name Function
 
-File:
+**File:**
 
 ```text
 02_functions/B4_fn_dept_name.sql
 ```
 
-Function:
+**Function:**
 
 ```text
 fn_dept_name
@@ -378,14 +392,14 @@ fn_dept_name
 
 This function receives a department ID and returns the corresponding department name.
 
-Example:
+### Example
 
 ```sql
 SELECT fn_dept_name(10)
 FROM dual;
 ```
 
-If the department ID does not exist, the function returns:
+If the department does not exist, the function returns:
 
 ```text
 Unknown Department
@@ -395,22 +409,22 @@ Unknown Department
 
 # 8. B5 – Functions in SQL
 
-File:
+**File:**
 
 ```text
 03_tests/B5_functions_in_select.sql
 ```
 
-This task demonstrates calling stored functions directly from SQL statements.
+This task demonstrates how stored PL/SQL functions can be called directly from SQL statements.
 
-Examples include:
+### Example
 
 ```sql
 SELECT fn_annual_salary(monthly_salary)
 FROM employees;
 ```
 
-and:
+Another example is:
 
 ```sql
 SELECT employee_id,
@@ -420,17 +434,11 @@ SELECT employee_id,
 FROM employees;
 ```
 
-This demonstrates how reusable PL/SQL functions can be integrated into SQL queries.
+This demonstrates the integration of PL/SQL functions with SQL queries.
 
-### Screenshot
+### B5 Execution Screenshot
 
-Save the SQL query output as:
-
-```text
-screenshots/B5_select_output.png
-```
-
-The screenshot should show the actual query and the returned results.
+![B5 Functions in SQL Output](sceenshots/B5_select_output.PNG)
 
 ---
 
@@ -438,55 +446,49 @@ The screenshot should show the actual query and the returned results.
 
 ## C1 – Payroll Validator
 
-File:
+**File:**
 
 ```text
 02_functions/C1_fn_validate_payroll.sql
 ```
 
-Function:
+**Function:**
 
 ```text
 fn_validate_payroll
 ```
 
-The payroll validation function combines multiple validation checks.
+The payroll validation function combines several validation checks.
 
 The function validates:
 
-* Employee existence
-* Monthly salary
-* Department existence
-* Hire date
-* Future hire dates
-* Invalid payroll information
+- Employee existence
+- Monthly salary
+- Department existence
+- Hire date
+- Future hire dates
+- Invalid payroll information
 
 The function returns a descriptive validation message.
 
-Example:
+### Example
 
 ```sql
 SELECT fn_validate_payroll(1001)
 FROM dual;
 ```
 
-The function is also tested using an employee ID that does not exist.
+The function is also tested with an employee ID that does not exist.
 
-### Screenshot
+### C1 Execution Screenshot
 
-Save the execution output as:
-
-```text
-screenshots/C1_output.png
-```
-
-The screenshot should show the validation results.
+![C1 Payroll Validator Output](sceenshots/C1_output.PNG)
 
 ---
 
 # 10. Testing
 
-Testing scripts are stored in:
+The testing scripts are stored in:
 
 ```text
 03_tests/
@@ -500,29 +502,27 @@ test_functions.sql
 test_validate_payroll.sql
 ```
 
-The tests are used to verify that:
+The tests verify that:
 
-* Functions compile successfully.
-* Functions return expected results.
-* Functions handle invalid inputs.
-* Functions can be called from SQL.
-* Payroll validation produces appropriate messages.
+- Functions compile successfully.
+- Functions return expected results.
+- Functions handle invalid inputs.
+- Functions can be called from SQL.
+- Payroll validation produces appropriate messages.
 
 ---
 
 # 11. How to Run the Project
 
-The recommended execution order is:
+The recommended execution order is shown below.
 
-### Step 1 – Create the database tables
+## Step 1 – Create Database Tables
 
 ```sql
 @00_setup/create_tables.sql
 ```
 
-### Step 2 – Create the functions
-
-Run:
+## Step 2 – Create the Functions
 
 ```sql
 @02_functions/B1_fn_annual_salary.sql
@@ -532,9 +532,7 @@ Run:
 @02_functions/C1_fn_validate_payroll.sql
 ```
 
-### Step 3 – Run the GOTO programs
-
-Run:
+## Step 3 – Run the GOTO Programs
 
 ```sql
 @01_goto/A1_number_classifier.sql
@@ -543,9 +541,7 @@ Run:
 @01_goto/A4_rewrite_no_goto.sql
 ```
 
-### Step 4 – Run function tests
-
-Run:
+## Step 4 – Run the Tests
 
 ```sql
 @03_tests/B5_functions_in_select.sql
@@ -553,114 +549,122 @@ Run:
 @03_tests/test_validate_payroll.sql
 ```
 
-### Step 5 – Capture screenshots
+## Step 5 – Capture Execution Evidence
 
-After each required program produces the expected result, capture the Oracle SQL*Plus or SQL Developer output.
-
-Place the screenshots in:
+After executing the required programs, screenshots of the actual Oracle results are stored in:
 
 ```text
-screenshots/
+sceenshots/
 ```
 
 ---
 
 # 12. Screenshot Evidence
 
-The repository contains a dedicated `screenshots` folder.
+The repository contains a dedicated folder called:
 
-The required screenshots are:
+```text
+sceenshots/
+```
 
-| Assignment Task         | Screenshot File                    |
-| ----------------------- | ---------------------------------- |
-| A1 Number Classifier    | `screenshots/A1_output.png`        |
-| A2 Salary Review        | `screenshots/A2_output.png`        |
-| A3 Illegal GOTO and Fix | `screenshots/A3_error_and_fix.png` |
-| A4 Rewrite Without GOTO | `screenshots/A4_output.png`        |
-| B5 Functions in SQL     | `screenshots/B5_select_output.png` |
-| C1 Payroll Validator    | `screenshots/C1_output.png`        |
+The screenshots are actual execution evidence from the Oracle environment.
 
-The screenshots are execution evidence and should be taken from the actual Oracle environment.
+| Task | Screenshot |
+|---|---|
+| A1 Number Classifier | `sceenshots/A1_output.PNG` |
+| A2 Salary Review | `sceenshots/A2_output.PNG` |
+| A3 Illegal GOTO and Fix | `sceenshots/A3_error_and_fix.PNG` |
+| A4 Rewrite Without GOTO | `sceenshots/A4_output1.PNG` |
+| B5 Functions in SQL | `sceenshots/B5_select_output.PNG` |
+| C1 Payroll Validator | `sceenshots/C1_output.PNG` |
 
-**Important:** The screenshots must show the real results from my own Oracle execution. Placeholder or fabricated screenshots should not be used.
+The screenshots are displayed in the relevant sections of this README using relative image paths.
 
 ---
 
-# 13. Screenshot Examples in This README
+# 13. Screenshot Gallery
 
-The screenshots can also be displayed directly in this README using relative Markdown paths.
+The following section provides a quick view of all execution evidence.
 
-For example:
+## A1 – Number Classifier
 
-### A1 Output
+![A1 Number Classifier Output](sceenshots/A1_output.PNG)
 
-![A1 Number Classifier Output](screenshots/A1_output.png)
+---
 
-### A2 Output
+## A2 – Salary Review
 
-![A2 Salary Review Output](screenshots/A2_output.png)
+![A2 Salary Review Output](sceenshots/A2_output.PNG)
 
-### A3 Error and Fix
+---
 
-![A3 Illegal GOTO Error and Fix](screenshots/A3_error_and_fix.png)
+## A3 – Illegal GOTO and Fix
 
-### A4 Output
+![A3 Illegal GOTO Error and Fix](sceenshots/A3_error_and_fix.PNG)
 
-![A4 Rewrite Without GOTO Output](screenshots/A4_output.png)
+---
 
-### B5 SQL Function Output
+## A4 – Rewrite Without GOTO
 
-![B5 Functions in SQL Output](screenshots/B5_select_output.png)
+![A4 Rewrite Without GOTO Output](sceenshots/A4_output1.PNG)
 
-### C1 Payroll Validation Output
+---
 
-![C1 Payroll Validation Output](screenshots/C1_output.png)
+## B5 – Functions in SQL
+
+![B5 Functions in SQL Output](sceenshots/B5_select_output.PNG)
+
+---
+
+## C1 – Payroll Validator
+
+![C1 Payroll Validator Output](sceenshots/C1_output.PNG)
 
 ---
 
 # 14. Exception Handling
 
-Exception handling is used to make the functions safer and more reliable.
+Exception handling is used to make the PL/SQL functions safer and more reliable.
 
 Examples of invalid input include:
 
-* NULL salary
-* Negative salary
-* NULL hire date
-* Future hire date
-* Non-existent employee
-* Non-existent department
+- NULL salary
+- Negative salary
+- NULL hire date
+- Future hire date
+- Non-existent employee
+- Non-existent department
 
-The functions return or raise appropriate results when invalid data is supplied.
+The functions provide appropriate results or raise exceptions when invalid data is supplied.
 
 ---
 
 # 15. Files and Their Purpose
 
-| File                         | Purpose                                 |
-| ---------------------------- | --------------------------------------- |
-| `create_tables.sql`          | Creates tables and sample data          |
-| `A1_number_classifier.sql`   | Demonstrates GOTO number classification |
-| `A2_salary_review.sql`       | Demonstrates GOTO salary review         |
-| `A3_illegal_goto.sql`        | Demonstrates invalid and corrected GOTO |
-| `A4_rewrite_no_goto.sql`     | Rewrites the salary task without GOTO   |
-| `B1_fn_annual_salary.sql`    | Creates annual salary function          |
-| `B2_fn_years_of_service.sql` | Creates years of service function       |
-| `B3_fn_calculate_tax.sql`    | Creates tax calculation function        |
-| `B4_fn_dept_name.sql`        | Creates department name function        |
-| `C1_fn_validate_payroll.sql` | Creates payroll validation function     |
-| `B5_functions_in_select.sql` | Demonstrates functions in SQL           |
-| `test_functions.sql`         | Tests B1–B4 functions                   |
-| `test_validate_payroll.sql`  | Tests payroll validation                |
-| `REFLECTION.md`              | Contains assignment reflection          |
+| File | Purpose |
+|---|---|
+| `create_tables.sql` | Creates tables and sample data |
+| `A1_number_classifier.sql` | Demonstrates GOTO number classification |
+| `A2_salary_review.sql` | Demonstrates GOTO salary review |
+| `A3_illegal_goto.sql` | Demonstrates invalid and corrected GOTO |
+| `A4_rewrite_no_goto.sql` | Rewrites the salary task without GOTO |
+| `B1_fn_annual_salary.sql` | Creates annual salary function |
+| `B2_fn_years_of_service.sql` | Creates years of service function |
+| `B3_fn_calculate_tax.sql` | Creates tax calculation function |
+| `B4_fn_dept_name.sql` | Creates department name function |
+| `C1_fn_validate_payroll.sql` | Creates payroll validation function |
+| `B5_functions_in_select.sql` | Demonstrates functions in SQL |
+| `test_functions.sql` | Tests B1–B4 functions |
+| `test_validate_payroll.sql` | Tests payroll validation |
+| `REFLECTION.md` | Contains assignment reflection |
 
 ---
 
 # 16. GitHub Commit Organization
 
-The repository should contain meaningful commits that show the development process.
+The repository should contain meaningful commits that demonstrate the development process.
 
-Recommended commits:
+Recommended commits include:
 
 ```text
 Initial repository structure and README
@@ -686,7 +690,7 @@ Add function and payroll validation tests
 Add Oracle execution screenshots
 ```
 
-These commits make the development history easier to understand.
+These commits provide a clear development history for the project.
 
 ---
 
@@ -696,50 +700,48 @@ AI assistance was used as a learning and development support tool during prepara
 
 The assistance included:
 
-* Understanding PL/SQL syntax.
-* Organizing the repository structure.
-* Reviewing SQL and PL/SQL logic.
-* Helping explain GOTO statements and stored functions.
-* Helping prepare documentation and testing procedures.
+- Understanding PL/SQL syntax.
+- Organizing the repository structure.
+- Reviewing SQL and PL/SQL logic.
+- Understanding GOTO statements and stored functions.
+- Preparing documentation and testing procedures.
 
-I reviewed the generated material, executed the SQL/PLSQL code in my Oracle environment, and take responsibility for understanding and submitting the final work.
+I reviewed and tested the SQL/PLSQL code in my Oracle environment and take responsibility for understanding the final submission.
 
 ---
 
 # 18. Academic Responsibility
 
-Although development assistance was used, the final submission should be based on my own understanding and verification.
-
 All SQL and PL/SQL scripts should be executed and tested in Oracle before submission.
 
-The screenshots included in the repository should represent actual execution results from the Oracle environment.
+The screenshots included in this repository represent execution evidence from the Oracle environment.
+
+The student is responsible for understanding the submitted code and results.
 
 ---
 
 # 19. Conclusion
 
-This project demonstrates the use of PL/SQL GOTO statements, labels, structured control flow, stored functions, SQL function calls, and exception handling.
+This project demonstrates the use of PL/SQL GOTO statements, labels, structured control flow, stored functions, SQL function calls, exception handling, and payroll validation.
 
-The assignment also demonstrates how reusable functions can be used to perform calculations, retrieve department information, and validate payroll information.
-
-Organizing the project into setup, GOTO programs, functions, tests, screenshots, and documentation makes the work easier to execute, verify, and maintain.
+The project is organized into setup scripts, GOTO programs, functions, tests, screenshots, and documentation to make the work easy to execute, review, and maintain.
 
 ---
 
 ## Author
 
-**Mutamba Alice**
-**Student ID: 27688**
-**INSY 8311 – Database Development with PL/SQL**
+**Mutamba Alice**  
+**Student ID:** 27688  
+**Course:** INSY 8311 – Database Development with PL/SQL
 
 ---
 
 ## Submission
 
-The completed project is maintained in a public GitHub repository and submitted through the required assignment Google Form.
-
-**Repository name:**
+**Repository Name:**
 
 ```text
 plsql-goto-functions-27688-Alice
 ```
+
+The completed project is maintained in a public GitHub repository and submitted through the required assignment Google Form.
