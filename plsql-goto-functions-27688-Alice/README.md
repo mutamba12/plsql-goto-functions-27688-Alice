@@ -179,8 +179,8 @@ The program therefore identifies the number as positive and odd.
 
 The execution screenshot should be stored as:
 
-```text
-sceenshorts/<img width="387" height="365" alt="A1_output" src="https://github.com/user-attachments/assets/7bc3f4f8-afef-4f97-b6bc-619a0bca20c6" />
+
+![A1 Number Classifier Output](sceenshots/A1_output.PNG)
 
 
 ```
