@@ -165,9 +165,9 @@ The program also displays:
 A1 completed
 ```
 
-## A1 Screenshot
+## A1 Sceenshot
 
-![A1 Oracle Screenshot](./plsql-goto-functions-27688-Alice/sceenshots/A1_output.PNG)
+![A1 Oracle Sceenshot](./plsql-goto-functions-27688-Alice/sceenshots/A1_output.PNG)
 
 ---
 
