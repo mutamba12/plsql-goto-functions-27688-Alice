@@ -851,18 +851,4 @@ The payroll validator combined several concepts into one practical task, includi
 
 Overall, the project improved my understanding of PL/SQL programming, debugging, testing, database functions, and GitHub-based project organization.
 
----
 
-# 29. Author
-
-**Mutamba Alice**
-
-**Student ID:** 27688
-
-**Course:** INSY 8311 – Database Development with PL/SQL
-
-**Assignment:** Individual Assignment III – PL/SQL GOTO Statements and Functions
-
----
-
-## End of README
