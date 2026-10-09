@@ -201,8 +201,7 @@ The following screenshot shows the Oracle execution result:
 
 ## A1 Oracle Output
 
-![A1 Screenshot](./sceenshots/A1_output.PNG)
-
+![A1 Oracle Screenshot](./plsql-goto-functions-27688-Alice/sceenshots/A1_output.PNG)
 ---
 
 ## A2 – Salary Review
