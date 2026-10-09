@@ -197,7 +197,7 @@ The program therefore identifies the number as **positive and odd**.
 
 The following screenshot shows the Oracle execution result:
 
-![A1 Number Classifier Output](sceenshots/A1_output.PNG)
+![A1 Oracle Screenshot](./plsql-goto-functions-27688-Alice/sceenshots/A1_output.PNG)
 
 ---
 
