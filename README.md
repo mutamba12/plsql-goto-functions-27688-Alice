@@ -197,7 +197,11 @@ The program therefore identifies the number as **positive and odd**.
 
 The following screenshot shows the Oracle execution result:
 
-![A1 Number Classifier Output](sceenshots/A1_output.PNG)
+# Screenshot Test
+
+## A1 Oracle Output
+
+![A1 Screenshot](./sceenshots/A1_output.PNG)
 
 ---
 
