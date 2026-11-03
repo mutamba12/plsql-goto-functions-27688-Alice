@@ -223,7 +223,7 @@ The program identifies the salary as being below the defined salary threshold.
 
 The following screenshot shows the Oracle execution result:
 
-![A2 Salary Review Output](sceenshots/A2_output.PNG)
+![image alt](https://github.com/mutamba12/plsql-goto-functions-27688-Alice/blob/main/plsql-goto-functions-27688-Alice/sceenshorts/A2_output.PNG?raw=true)
 
 ---
 
