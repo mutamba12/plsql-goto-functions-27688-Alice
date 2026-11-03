@@ -481,7 +481,7 @@ The function is also tested with an employee ID that does not exist.
 
 ### C1 Execution Screenshot
 
-![C1 Payroll Validator Output](sceenshots/C1_output.PNG)
+![image alt](https://github.com/mutamba12/plsql-goto-functions-27688-Alice/blob/main/plsql-goto-functions-27688-Alice/sceenshorts/C1_output.PNG?raw=true)
 
 ---
 
