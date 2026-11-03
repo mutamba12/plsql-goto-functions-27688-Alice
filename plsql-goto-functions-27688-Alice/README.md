@@ -197,7 +197,8 @@ The program therefore identifies the number as **positive and odd**.
 
 The following screenshot shows the Oracle execution result:
 
-![A1 Oracle Screenshot](./plsql-goto-functions-27688-Alice/sceenshots/A1_output.PNG)
+
+![image alt](https://github.com/mutamba12/plsql-goto-functions-27688-Alice/blob/main/plsql-goto-functions-27688-Alice/sceenshorts/A1_output.PNG?raw=true)
 
 ---
 
