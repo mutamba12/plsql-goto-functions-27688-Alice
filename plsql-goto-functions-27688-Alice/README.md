@@ -279,7 +279,7 @@ This demonstrates a structured alternative to GOTO-based control flow.
 
 ### A4 Execution Screenshot
 
-![A4 Rewrite Without GOTO Output](sceenshots/A4_output1.PNG)
+![image alt](https://github.com/mutamba12/plsql-goto-functions-27688-Alice/blob/main/plsql-goto-functions-27688-Alice/sceenshorts/A4_output1.PNG?raw=true)
 
 ---
 
