@@ -437,8 +437,7 @@ FROM employees;
 This demonstrates the integration of PL/SQL functions with SQL queries.
 
 ### B5 Execution Screenshot
-
-![B5 Functions in SQL Output](sceenshots/B5_select_output.PNG)
+![image alt](https://github.com/mutamba12/plsql-goto-functions-27688-Alice/blob/main/plsql-goto-functions-27688-Alice/sceenshorts/B5_select_output.PNG?raw=true)
 
 ---
 
