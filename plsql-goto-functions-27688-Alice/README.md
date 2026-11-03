@@ -253,8 +253,7 @@ This task demonstrates:
 ### A3 Execution Screenshot
 
 The screenshot shows both the illegal GOTO compilation error and the successful corrected execution.
-
-![A3 Illegal GOTO Error and Fix](sceenshots/A3_error_and_fix.PNG)
+![image alt](https://github.com/mutamba12/plsql-goto-functions-27688-Alice/blob/main/plsql-goto-functions-27688-Alice/sceenshorts/A3_error_and_fix.PNG?raw=true)
 
 ---
 
